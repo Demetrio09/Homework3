@@ -9,13 +9,39 @@
     <script type="text/javascript">
 
         alert("Welcome to our Passworld Generator!");
-
-        for (i = 0; i < 10; i++) {
-        var randomNumber = Math.floor(Math.random() * 9 )+ 1;
-        console.log(randomNumber);
+        var needNewPassowrd = confirm("Do you need a New Passworld? OK for yes / CANCEL for no:");
         
+        var randomNumber = Math.floor(Math.random() * 9 ) + 1;
+        
+        var randomLetter1 = Math.random().toString(36).substring(2, 15);
+        var randomLetter2 = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+       
+        var randomSpecial;
+
+        
+  
+        if (needNewPassowrd) {
+            var eightCharacters = confirm("Click on OK to generate 8 characters or CANCEL to generate up 128 characters:");
+        }   
+        else {
+            alert("Came back anytime!");
         }
 
+        if (eightCharacters) {
+            var specialCharacter = confirm("Do you want to include lowercase, uppercase, numeric, and/or special characters");
+            var eightCharacters = randomLetter1
+        }
+        else {
+            var specialCharacter = confirm("Do you want to include lowercase, uppercase, numeric, and/or special characters");
+            var moreThanEightCharacters = randomLetter2
+        }
+        if (specialCharacter) {
+            alert("Your new passworld is: " + eightCharacters);
+        }
+        else {
+            alert("Your new passworld is: " + moreThanEightCharacters);
+        }
+        
 
 
 
@@ -23,8 +49,7 @@
 
 
 
-
-        confirm("Do you need a New Passworld?")
+        
         
         
     </script>

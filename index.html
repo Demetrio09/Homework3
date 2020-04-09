@@ -1,46 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-</head>
-<body>
-    <script type="text/javascript">
-
-    // Alert with welcome to the page!
-        alert("Welcome to our Passworld Generator!");
-
-    // Setup variables;
-        var needNewPassowrd = confirm("Do you need a New Passworld? OK for yes / CANCEL for no:");
-        
-        var randomNumber = Math.floor(Math.random() * 9 ) + 1;
-        
-        var randomLetter8 = Math.random().toString(36).substring(2, 15);
-        var randomLetter12 = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-              
-    // If and Else if statments collecting data from user;
-        if (needNewPassowrd) {
-            var eightCharacters = confirm("Click on OK to generate 8 characters or CANCEL to generate up 128 characters:");
-        }    
-        else {
-            alert("Came back anytime!");
-        }    
-        if (eightCharacters) {
-            var specialCharacter = confirm("Do you want to include lowercase, uppercase, numeric, and/or special characters");
-           
-        }
-        else {
-            var specialCharacter = confirm("Do you want to include lowercase, uppercase, numeric, and/or special characters");
-            
-        }
-        if (specialCharacter === true || specialCharacter === false) {
-            alert("Your new passworld is: " + randomLetter8);
-        }
-        else {
-            alert("Your new passworld is: " + randomLetter12);
-        }
-        
-    </script>
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

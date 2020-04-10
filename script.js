@@ -5,10 +5,10 @@ var generateEl = document.getElementById("generate");
 
 // Setup variables with Arrays.
 
-var upperCaseEl = "QWERTYUIOPLKJHGFDSAZXCVBNM";
-var lowerCaseEl = "zxcvbnmlkjhgfdsaqwertyuiop";
-var numbersEl = "0123456789";
-var symbolsEl = "~!@#$%^&*()_+'='/*";
+var upperCaseEl = "QWERTYUIOPLKJHGFDSAZXCVBNMQWERTYUIOPLKJHGFDSAZXCVBNMQWERTYUIOPLKJHGFDSAZXCVBNMQWERTYUIOPLKJHGFDSAZXCVBNMQWERTYUIOPLKJHGFDSAZXCVBNMQWERTYUIOPLKJHGFDSAZXCVBNM";
+var lowerCaseEl = "zxcvbnmlkjhgfdsaqwertyuiopzxcvbnmlkjhgfdsaqwertyuiopzxcvbnmlkjhgfdsaqwertyuiopzxcvbnmlkjhgfdsaqwertyuiopzxcvbnmlkjhgfdsaqwertyuiopzxcvbnmlkjhgfdsaqwertyuiop";
+var numbersEl = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789";
+var symbolsEl = "~!@#$%^&*()_+'='/*~!@#$%^&*()_+'='/*~!@#$%^&*()_+'='/*~!@#$%^&*()_+'='/*~!@#$%^&*()_+'='/*~!@#$%^&*()_+'='/*~!@#$%^&*()_+'='/*~!@#$%^&*()_+'='/*~!@#$%^&*()_+'='/*";
 
 // Split the string to arrays.
 
@@ -59,7 +59,7 @@ function hasCharacters(passwordLenght) {
     if (symbols) {
         pw.push(symbolsEl.split(""));
     }
-    // Convert Array to strings
+    // Push the strings together.
     for (let i = 0; i < pw.length; i++){
         all_options.push(...pw[i])
     }

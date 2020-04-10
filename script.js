@@ -59,12 +59,12 @@ function hasCharacters(passwordLenght) {
     if (symbols) {
         pw.push(symbolsEl.split(""));
     }
-
+    // Convert Array to strings
     for (let i = 0; i < pw.length; i++){
         all_options.push(...pw[i])
     }
 
-
+    // Shuffle Strings.
     
     let shuffled = all_options
     .map((a) => ({sort: Math.random(), value: a}))

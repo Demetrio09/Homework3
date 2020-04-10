@@ -67,9 +67,9 @@ function hasCharacters(passwordLenght) {
 
     
     let shuffled = all_options
-    .map((a) => ({sort: Math.random(), value: a}));
-    .sort((a, b) => a.sort - b.sort);
-    .map((a) => a.value);
+    .map((a) => ({sort: Math.random(), value: a}))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value)
 
    let final_random_password = [];
 
